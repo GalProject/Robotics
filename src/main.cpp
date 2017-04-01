@@ -18,7 +18,12 @@ int main() {
 	try {
 		hamster = new HamsterAPI::Hamster(1);
 		sleep(1);
+		const int mapHeight = 500;
+		const int mapWidth = 500;
+		const double mapResolution = 0.05;
 
+		cv::namedWindow("Camera Image");
+		sleep(1);
 		OccupancyGrid ogrid = hamster->getSLAMMap();
 
 		Robot robot(hamster);
@@ -26,9 +31,20 @@ int main() {
 
 		locManager.initParticles();
 
+
 		while (hamster->isConnected()) {
 			try {
+				sleep(1);
+
+
+					cv::Mat mat(mapWidth,mapHeight,CV_8UC3,cv::Scalar(0,0,0));
+					cv::imshow("Camera Image",mat);
+					cv::waitKey(2);
+
+
+
 				HamsterAPI::LidarScan ld = hamster->getLidarScan();
+
 				if (ld.getDistance(180) < 0.4) {
 					hamster->sendSpeed(-0.5, 0);
 					cout << "Front: " << ld.getDistance(180) << endl;
@@ -40,10 +56,14 @@ int main() {
 				else
 					hamster->sendSpeed(1.0, 0);
 
+
 				robot.updatePose();
 				locManager.updateParticles(robot.getDeltaX(), robot.getDeltaY(), robot.getDeltaYaw());
 				locManager.printParticles();
 				sleep(0.5);
+
+
+
 
 
 			} catch (const HamsterAPI::HamsterError & message_error) {
