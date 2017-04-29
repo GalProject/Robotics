@@ -9,13 +9,6 @@ using namespace std;
 #define ROULETTE 5
 #define TRASHOLD 0.5
 
-
-
-
-LocalizationManager::LocalizationManager(const OccupancyGrid &ogrid, Hamster *hamster) : ogrid(ogrid), hamster(hamster) {
-	cout << "width: " << ogrid.getWidth() << ", height: " << ogrid.getHeight() << endl;
-}
-
 void LocalizationManager::getRandomNearGoodParticles() {
 
 	std::sort(this->particles.begin(),this->particles.end(),lessThanBelief);
@@ -140,6 +133,10 @@ void LocalizationManager::printParticles() const {
 		Particle *particle = particles[i];
 		cout << "Particle " << i << ": " << particle->x << "," << particle->y << ", belief: " << particle->belief << endl;
 	}
+}
+
+LocalizationManager::LocalizationManager(const OccupancyGrid &ogrid, Hamster *hamster) : ogrid(ogrid), hamster(hamster) {
+	cout << "width: " << ogrid.getWidth() << ", height: " << ogrid.getHeight() << endl;
 }
 
 vector<Particle *> LocalizationManager::getParticles() const {
