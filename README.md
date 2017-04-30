@@ -1,2 +1,1 @@
-# Robotics
-Our Final Robotics Project
+# Robotics Final Project
