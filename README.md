@@ -1,6 +1,4 @@
 # Robotics Final Project 
-Our Final Robotics Project 
-
 Developed in c++ using with HamsterAPI 
 
 os: Ubuntu
