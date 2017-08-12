@@ -4,4 +4,5 @@
 Link: https://www.youtube.com/watch?v=8XMOqifuK1w&t=144s
 
 # Pic
-![My image](http://i64.tinypic.com/15d5gsp.png)
+![Imgur](http://i.imgur.com/yFaVIvn.jpg)
+
