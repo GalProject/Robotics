@@ -1,4 +1,4 @@
-# Robotics Final Project 
+# Our Robotics Final Project 
 Developed in c++ using with HamsterAPI 
 
 os: Ubuntu
@@ -10,7 +10,7 @@ external lib: opencv_highgui, HamsterAPICommon,opencv core, CogniAlgCPP,HamsterA
 # Video
 Link: https://www.youtube.com/watch?v=8XMOqifuK1w&t=144s
 
-# Pic
+# Gif
 ![Imgur](https://media.giphy.com/media/7K6p1FcCrbarS/giphy.gif)
 
 
