@@ -1,7 +1,7 @@
-# Our Robotics Final Project 
-Developed in c++ using with HamsterAPI
-
+# Robotics Final Project 
 this project is under the supervision of Dr. Yehuda Elmaliach
+
+Developed in c++ using with HamsterAPI
 
 os: Ubuntu
 
